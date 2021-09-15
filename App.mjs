@@ -1,4 +1,4 @@
-import mmm, { Hello } from './myEsmModule.mjs'
+import mmm, { Hello as NotHello } from './myEsmModule.mjs'
 
-Hello()
+NotHello()
 mmm()
