@@ -1,5 +1,5 @@
 let myAnonFunction = function() {
-    console.log("I'm saved anonymus!");
+    console.log("I'm saved anonymus!")
     console.trace()
 }
 
@@ -12,6 +12,8 @@ let myArrowFunction = () => {
     console.log("Event better than Legolas!")
     console.trace()
 }
+
+let oneLiner = () => console.log("One liner");
 
 (function (){
     console.log("I'm an anonymus IIFE")
@@ -26,3 +28,9 @@ let myArrowFunction = () => {
 myAnonFunction()
 myNamedFunction()
 myArrowFunction()
+oneLiner()
+hoistedFunction()
+
+function hoistedFunction() {
+    console.log('Hoisted!')
+}
