@@ -1,21 +1,28 @@
-var myGlobal = "I'm global... am I?"
-var myVar = "I'm a var"
-
-if (false) {
-    var myVar = 'intercepted'
+let myAnonFunction = function() {
+    console.log("I'm saved anonymus!");
+    console.trace()
 }
 
-function What() {
-    console.log(`What? Global: ${myGlobal}`)
-    console.log(`What? Before: ${myVar}`)
-    var myVar = 'what is this?'
-    console.log(`What? After: ${myVar}`)
+let myNamedFunction = function myName() {
+    console.log("I saved have a name!")
+    console.trace()
 }
 
-console.log(`Before myVar: ${myVar}`)
-What()
-console.log(`After myVar: ${myVar}`)
+let myArrowFunction = () => {
+    console.log("Event better than Legolas!")
+    console.trace()
+}
 
-console.log(`Before myHoistedVar: ${myHoistedVar}`)
-var myHoistedVar = "I'been hoisted!"
-console.log(`After myHoistedVar: ${myHoistedVar}`)
+(function (){
+    console.log("I'm an anonymus IIFE")
+    console.trace()
+})();
+
+(function namedIife(){
+    console.log("I'm a named IIFE ")
+    console.trace()
+})();
+
+myAnonFunction()
+myNamedFunction()
+myArrowFunction()
