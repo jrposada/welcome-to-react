@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import { FC, useCallback, useState } from "react";
 import Car, { CarProps } from "./car";
 
 import "./dashboard.css";
@@ -8,14 +8,14 @@ const Dashboard: FC = ({ children }) => {
   const [cars, setCars] = useState<CarProps[]>([]);
   const [drivers, setDrivers] = useState<DriverProps[]>([]);
 
-  const addCar = () => {
+  const addCar = useCallback(() => {
     setCars([
       ...cars,
       { brand: "hyndai", doors: 2, id: Math.floor(Math.random() * (100 + 1)) },
     ]);
-  };
+  }, [cars]);
 
-  const addDriver = () => {
+  const addDriver = useCallback(() => {
     setDrivers([
       ...drivers,
       {
@@ -24,7 +24,7 @@ const Dashboard: FC = ({ children }) => {
         id: Math.floor(Math.random() * (100 + 1)),
       },
     ]);
-  };
+  }, [drivers]);
 
   return (
     <div className="dashboard">
