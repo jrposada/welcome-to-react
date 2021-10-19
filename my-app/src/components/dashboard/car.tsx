@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useMemo } from "react";
 
 interface CarProps {
   id: number;
@@ -7,7 +7,7 @@ interface CarProps {
 }
 
 const Car: FC<CarProps> = ({ brand, doors }) => {
-  const title = `${brand} (${doors})`;
+  const title = useMemo(() => `${brand} (${doors})`, [brand, doors]);
   return (
     <div className="car">
       <div>{title}</div>
