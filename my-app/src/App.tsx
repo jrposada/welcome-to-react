@@ -1,13 +1,11 @@
-import ClassComponent from "./components/class-component";
-import FunctionalComponent from "./components/functional-component";
+import Dashboard from "./components/dashboard/dashboard";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
-      <FunctionalComponent name="Paco" />
-      <ClassComponent name="Juan" />
+      <Dashboard />
     </div>
   );
 }
