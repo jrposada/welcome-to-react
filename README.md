@@ -13,6 +13,12 @@ It is divided in 3 section:
    1. Mocking.
    2. Testing React.
 
+## Requirements
+
+- [Node](https://nodejs.org/en/)
+- [Npm](https://www.npmjs.com/) or [Yarn](https://yarnpkg.com/)
+- [VS Code](https://code.visualstudio.com/) (Recomended)
+
 ## How to run JavaScript code from the console
 
 ```sh
