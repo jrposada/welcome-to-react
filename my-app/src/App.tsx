@@ -1,11 +1,11 @@
-import Dashboard from "./components/dashboard/dashboard";
+import Piramid from "./components/piramid/piramid";
 
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
-      <Dashboard />
+      <Piramid />
     </div>
   );
 }
